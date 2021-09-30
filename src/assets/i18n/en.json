@@ -1,0 +1,8 @@
+{
+    "name": "User Name",
+    "age": "User Age",
+    "gender": "User Gender",
+    "username-error-message": "UserName is a Mandatory Field",
+    "user-age-error-message": "Age is a Mandatory Field",
+    "user-gender-error-message": "Gender is a Mandatory Field"
+}

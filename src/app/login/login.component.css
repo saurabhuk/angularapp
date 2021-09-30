@@ -1,0 +1,29 @@
+.text-alignment {
+    text-align:center
+  }
+
+  .box{
+    margin:0 auto; 
+    width:50%;
+    padding:20px;
+    background:#f9f9f9;
+    border:2px solid #333;
+    }
+
+    button[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    .form-fields {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .alert{
+      margin-top: 5px;
+    }

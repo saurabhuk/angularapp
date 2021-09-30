@@ -1,0 +1,21 @@
+<app-header></app-header>
+<div class="text-alignment">
+    <h1 id="listPageTitle">User List Page</h1>
+    <table id="table">
+        <thead>
+            <th>User Id</th>
+            <th>User Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+        </thead>
+        <tbody *ngFor="let user of users">
+            <td>{{ user.id }}</td>
+            <td>{{ user.userName }}</td>
+            <td>{{ user.age }}</td>
+            <td>{{ user.gender }}</td>
+        </tbody>
+    </table>
+    <div class="col-sm-10">
+        <a id="backButton" class="btn btn-success pull-right" routerLink="/homePage" type="button">Back</a>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+<app-header></app-header>
+<div class="whole-page">
+    <h1 class="text-alignment" id="registerPagetitle">User Registration Page</h1>
+    <div class="box text-alignment">
+        <form [formGroup]="personForm" (ngSubmit)="onSubmit()">
+            <div class="margin">
+                <div>
+                    <label>Name</label>
+                    <input class="form-fields" type="text" formControlName="userName" placeholder="Enter Your Name"
+                        id="name">
+                </div>
+                <div id="nameErrMsg" *ngIf="personForm.get('userName').invalid && personForm.get('userName').errors &&
+                 (personForm.get('userName').dirty || personForm.get('userName').touched)">
+                    <small class="alert alert-danger text-danger"
+                        *ngIf="personForm.get('userName').hasError('required')">
+                        <!-- {{ 'username-error-message' | translate }} -->
+                        Please enter user name
+                    </small>
+                </div>
+            </div>
+
+            <div class="margin">
+                <div>
+                    <label>Age</label>
+                    <select class="form-fields" id="age" name="my-dropdown-age" formControlName="age">
+                        <option value="" disabled selected>Select Your Age</option>
+                        <option *ngFor="let number of numbers" placeholder="Age" [value]="number">{{number}}</option>
+                    </select>
+                </div>
+                <div id="ageErrMsg" *ngIf="personForm.get('age').invalid && personForm.get('age').errors &&
+                (personForm.get('age').dirty || personForm.get('age').touched)">
+                    <small class="alert alert-danger text-danger" *ngIf="personForm.get('age').hasError('required')">
+                        <!-- {{ 'username-error-message' | translate }} -->
+                        Please Select age of user
+                    </small>
+                </div>
+            </div>
+            <div class="margin">
+                <div>
+                    <label>Gender</label>
+                    <select class="form-fields" id="gender" name="my-dropdown-gender" formControlName="gender">
+                        <option value="" disabled selected>Select Your Gender</option>
+                        <option *ngFor="let gender of genders" placeholder="Gender" [value]="gender">{{gender}}</option>
+                    </select>
+                </div>
+                <div id="genderErrMsg" *ngIf="personForm.get('gender').invalid && personForm.get('gender').errors &&
+                (personForm.get('gender').dirty || personForm.get('gender').touched)">
+                    <small class="alert alert-danger text-danger" *ngIf="personForm.get('gender').hasError('required')">
+                        <!-- {{ 'username-error-message' | translate }} -->
+                        Please Select gender of user
+                    </small>
+                </div>
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

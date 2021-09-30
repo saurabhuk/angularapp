@@ -1,0 +1,19 @@
+<h1 id="loginTitle" class="text-alignment">Login Page</h1>
+<div class="box text-alignment">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label>UserName</label>
+            <input class="form-fields" type="text" id="userName" placeholder="Enter User Name"
+                formControlName="userName" />
+        </div>
+        <div>
+            <label>Password</label>
+            <input class="form-fields" type="password" id="password" placeholder="Enter Password"
+                formControlName="password" />
+        </div>
+        <div>
+            <button type="submit">Login</button>
+        </div>
+    </form>
+    <div id="alertMessage" *ngIf="showAlertMsg" class="alert alert-danger">{{alertMessage}}</div>
+</div>
