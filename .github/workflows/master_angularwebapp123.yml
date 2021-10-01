@@ -52,4 +52,4 @@ jobs:
         with:
           app-name: 'angularwebapp123'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0C0CB7C1FDB447CBAAE8A90CFAA8E747 }}
-          package: ./dist/hello-world-app
+          package: ./dist/example-app
