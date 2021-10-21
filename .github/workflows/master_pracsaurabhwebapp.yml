@@ -53,4 +53,4 @@ jobs:
         with:
           app-name: 'pracsaurabhwebapp'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_34E16DB5029746BF85B51EF780CCD318 }}
-          package: .dist/example-app
+          package: ./dist/example-app
